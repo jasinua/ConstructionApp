@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activitiesRegistration.RegisterActivitiesFragment">
+
+    <TextView
+        android:id="@+id/activities_registration_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        android:textSize="40dp"
+        android:textColor="@color/teal_200"
+        android:text="Activities Registration"
+        android:fontFamily="@font/amaranth"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/userIDLoggedIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@id/activities_registration_text"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Logged In User"
+        android:fontFamily="@font/adamina"
+        android:background="@drawable/costum_input"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/locationID"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@id/userIDLoggedIn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="40dp"
+        android:backgroundTint="#B8B8B8"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/llCardView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="17dp"
+            >
+
+
+            <TextView
+                android:id="@+id/location_register_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location "
+                android:fontFamily="@font/adamina"
+                android:textSize="27dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolID"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@id/locationID"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="40dp"
+        android:backgroundTint="#B8B8B8"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/llCardView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="17dp"
+            >
+
+
+            <TextView
+                android:id="@+id/toolName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:fontFamily="@font/adamina"
+                android:textSize="27dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@id/toolID"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Time"
+        android:fontFamily="@font/adamina"
+        android:background="@drawable/costum_input"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userIdGiftesUser"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="40dp"
+        android:backgroundTint="#B8B8B8"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/llCardView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="17dp"
+            >
+
+
+            <TextView
+                android:id="@+id/tool_register_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Reciever"
+                android:fontFamily="@font/adamina"
+                android:textSize="27dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <Button
+        android:id="@+id/insertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="15sp"
+        android:text="Register Activities"
+        android:fontFamily="@font/adamina"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:backgroundTint="#539DA4"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userIdGiftesUser" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

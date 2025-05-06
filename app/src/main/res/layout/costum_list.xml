@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10sp"
+    android:id="@+id/rowLayout">
+
+    <TextView
+        android:id="@+id/toolID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:text="1"
+        android:fontFamily="@font/amaranth"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/toolName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tool Name"
+        android:fontFamily="@font/amaranth"
+        android:textSize="25sp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/toolID"
+        app:layout_constraintStart_toEndOf="@+id/toolID"
+        app:layout_constraintTop_toTopOf="@+id/toolID" />
+
+    <TextView
+        android:id="@+id/toolModule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Module"
+        android:fontFamily="@font/amaranth"
+        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolName"
+        app:layout_constraintStart_toEndOf="@+id/toolName"
+        app:layout_constraintTop_toTopOf="@+id/toolName" />
+
+    <TextView
+        android:id="@+id/toolYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Year"
+        android:fontFamily="@font/amaranth"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/toolModule"
+        app:layout_constraintStart_toEndOf="@+id/toolModule"
+        app:layout_constraintTop_toTopOf="@+id/toolModule"
+         />
+    <TextView
+        android:id="@+id/toolDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Desc"
+        android:fontFamily="@font/amaranth"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolYear"
+        app:layout_constraintStart_toEndOf="@+id/toolYear"
+        app:layout_constraintTop_toTopOf="@+id/toolYear"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

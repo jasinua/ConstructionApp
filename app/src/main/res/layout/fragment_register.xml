@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".toolRegistration.RegisterFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/theToolRegisterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="100dp"
+            android:textSize="40dp"
+            android:textColor="@color/teal_200"
+            android:text="Tool Registration"
+            android:fontFamily="@font/amaranth"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/toolName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/theToolRegisterText"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Tool Name"
+            android:fontFamily="@font/adamina"
+            android:background="@drawable/costum_input"
+            />
+
+        <EditText
+            android:id="@+id/toolModule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/toolName"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Tool Module"
+            android:fontFamily="@font/adamina"
+            android:background="@drawable/costum_input"
+            />
+
+        <EditText
+            android:id="@+id/toolYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/toolModule"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Tool Year"
+            android:fontFamily="@font/adamina"
+            android:background="@drawable/costum_input"
+            />
+
+        <EditText
+            android:id="@+id/toolDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/toolYear"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Tool Description"
+            android:fontFamily="@font/adamina"
+            android:background="@drawable/costum_input"
+            />
+
+        <Button
+            android:id="@+id/insertButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10sp"
+            android:text="Register tool"
+            android:fontFamily="@font/adamina"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:backgroundTint="#539DA4"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

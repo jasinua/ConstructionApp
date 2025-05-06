@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.collection.MainFragment"
+        android:label="Main Page"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_workersFragment"
+            app:destination="@id/workersFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_activitiesFragment"
+            app:destination="@id/activitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolsFragment"
+        android:name="com.example.collection.toolRegistration.ToolsFragment"
+        android:label="Tools"
+        tools:layout="@layout/fragment_tools" >
+        <action
+            android:id="@+id/action_toolsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_registerFragment2"
+            app:destination="@id/registerFragment2" />
+        <action
+            android:id="@+id/action_toolsFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workersFragment"
+        android:name="com.example.collection.userRegistration.WorkersFragment"
+        android:label="Workers"
+        tools:layout="@layout/fragment_workers" >
+        <action
+            android:id="@+id/action_workersFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_workersFragment_to_userRegisterFragment"
+            app:destination="@id/userRegisterFragment" />
+        <action
+            android:id="@+id/action_workersFragment_to_userViewFragment"
+            app:destination="@id/userViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment2"
+        android:name="com.example.collection.toolRegistration.RegisterFragment"
+        android:label="Register Tools"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment2_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFragment"
+        android:name="com.example.collection.toolRegistration.ViewFragment"
+        android:label="View Tools"
+        tools:layout="@layout/fragment_view" >
+        <action
+            android:id="@+id/action_viewFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+        <action
+            android:id="@+id/action_viewFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.collection.toolRegistration.EditFragment"
+        android:label="Update Tools"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+        <argument
+            android:name="currentTool"
+            app:argType="com.example.collection.model.Tool" />
+    </fragment>
+    <fragment
+        android:id="@+id/userRegisterFragment"
+        android:name="com.example.collection.userRegistration.UserRegisterFragment"
+        android:label="Register User"
+        tools:layout="@layout/fragment_user_register" >
+        <action
+            android:id="@+id/action_userRegisterFragment_to_workersFragment"
+            app:destination="@id/workersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userViewFragment"
+        android:name="com.example.collection.userRegistration.UserViewFragment"
+        android:label="View Users"
+        tools:layout="@layout/fragment_user_view" >
+        <action
+            android:id="@+id/action_userViewFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+        <action
+            android:id="@+id/action_userViewFragment_to_workersFragment"
+            app:destination="@id/workersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserFragment"
+        android:name="com.example.collection.userRegistration.EditUserFragment"
+        android:label="Update User"
+        tools:layout="@layout/fragment_edit_user" >
+        <action
+            android:id="@+id/action_editUserFragment_to_userViewFragment"
+            app:destination="@id/userViewFragment" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.collection.model.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.collection.locationRegistration.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_locationFragment_to_viewLocationFragment"
+            app:destination="@id/viewLocationFragment" />
+        <action
+            android:id="@+id/action_locationFragment_to_registerLocationFragment"
+            app:destination="@id/registerLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewLocationFragment"
+        android:name="com.example.collection.locationRegistration.ViewLocationFragment"
+        android:label="fragment_view_location"
+        tools:layout="@layout/fragment_view_location" >
+        <action
+            android:id="@+id/action_viewLocationFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_viewLocationFragment_to_editLocationFragment"
+            app:destination="@id/editLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerLocationFragment"
+        android:name="com.example.collection.locationRegistration.RegisterLocationFragment"
+        android:label="fragment_register_location"
+        tools:layout="@layout/fragment_register_location" >
+        <action
+            android:id="@+id/action_registerLocationFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editLocationFragment"
+        android:name="com.example.collection.locationRegistration.EditLocationFragment"
+        android:label="fragment_edit_location"
+        tools:layout="@layout/fragment_edit_location" >
+        <action
+            android:id="@+id/action_editLocationFragment_to_viewLocationFragment"
+            app:destination="@id/viewLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activitiesFragment"
+        android:name="com.example.collection.activitiesRegistration.ActivitiesFragment"
+        android:label="fragment_activities"
+        tools:layout="@layout/fragment_activities" >
+        <action
+            android:id="@+id/action_activitiesFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_activitiesFragment_to_registerActivitiesFragment"
+            app:destination="@id/registerActivitiesFragment" />
+        <action
+            android:id="@+id/action_activitiesFragment_to_viewActivitiesFragment"
+            app:destination="@id/viewActivitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerActivitiesFragment"
+        android:name="com.example.collection.activitiesRegistration.RegisterActivitiesFragment"
+        android:label="fragment_register_activities"
+        tools:layout="@layout/fragment_register_activities" >
+        <action
+            android:id="@+id/action_registerActivitiesFragment_to_activitiesFragment"
+            app:destination="@id/activitiesFragment" />
+        <action
+            android:id="@+id/action_registerActivitiesFragment_to_toolListFilterFragment"
+            app:destination="@id/toolListFilterFragment" />
+        <action
+            android:id="@+id/action_registerActivitiesFragment_to_locationListFilterFragment"
+            app:destination="@id/locationListFilterFragment" />
+        <action
+            android:id="@+id/action_registerActivitiesFragment_to_userListFilterFragment"
+            app:destination="@id/userListFilterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewActivitiesFragment"
+        android:name="com.example.collection.activitiesRegistration.ViewActivitiesFragment"
+        android:label="fragment_view_activities"
+        tools:layout="@layout/fragment_view_activities" >
+        <action
+            android:id="@+id/action_viewActivitiesFragment_to_activitiesFragment"
+            app:destination="@id/activitiesFragment" />
+        <action
+            android:id="@+id/action_viewActivitiesFragment_to_editActivitiesFragment"
+            app:destination="@id/editActivitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editActivitiesFragment"
+        android:name="com.example.collection.activitiesRegistration.EditActivitiesFragment"
+        android:label="fragment_edit_activities"
+        tools:layout="@layout/fragment_edit_activities" >
+        <action
+            android:id="@+id/action_editActivitiesFragment_to_viewActivitiesFragment"
+            app:destination="@id/viewActivitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolListFilterFragment"
+        android:name="com.example.collection.ToolListFilterFragment"
+        android:label="fragment_tool_list_filter"
+        tools:layout="@layout/fragment_tool_list_filter" >
+        <action
+            android:id="@+id/action_toolListFilterFragment_to_registerActivitiesFragment"
+            app:destination="@id/registerActivitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationListFilterFragment"
+        android:name="com.example.collection.LocationListFilterFragment"
+        android:label="fragment_location_list_filter"
+        tools:layout="@layout/fragment_location_list_filter" >
+        <action
+            android:id="@+id/action_locationListFilterFragment_to_registerActivitiesFragment"
+            app:destination="@id/registerActivitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userListFilterFragment"
+        android:name="com.example.collection.UserListFilterFragment"
+        android:label="fragment_user_list_filter"
+        tools:layout="@layout/fragment_user_list_filter" >
+        <action
+            android:id="@+id/action_userListFilterFragment_to_registerActivitiesFragment"
+            app:destination="@id/registerActivitiesFragment" />
+    </fragment>
+</navigation>
